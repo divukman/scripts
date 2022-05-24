@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for dir in . ; do printf \
+locations=(~/Desktop ~/Downloads)
+
+for dir in ${locations[@]} ; do printf \
 "%-9s: %5d files in %5d folders, " "$dir" \
 $(find $dir -type f | wc -l) \
 $(find $dir -type d | wc -l); \
